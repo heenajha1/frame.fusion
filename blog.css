@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Roboto&display=swap');
+
+html {
+    
+}
+
+:root {
+    /* --Playfair: 'Playfair Display', serif;
+    --Quciksand: "Quicksand", sans-serif; */
+    --Poppins: "Poppins", sans-serif;
+    --dark: rgb(95, 116, 100);
+    --exDark: rgb(36, 61, 37);
+    --back: rgb(250, 217, 230);
+    --ascent: rgb(228, 174, 197);
+    --font:rgb(27, 27, 27);
+}
+
+* {
+    padding:0px;
+    margin:0px;
+    font-family: var(--Poppins);
+    
+}
+
+body {
+    color:var(--font);
+    line-height: 1.4;
+}
+
+img {
+    width:100%;
+    display:block;
+    
+}
+/* <!-- HEADER SECTION: Navbar + Banner --> */
+.container {
+    max-width:1320px;
+    padding:0 1.2rem;
+    margin: 0 auto;
+}
+
+/* header CSS properties */
+header {
+    min-height:100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), 
+                      url('./images/6.jpg'); 
+    background-size: cover; /* Make the background image cover the container */
+    background-position: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:stretch;
+    color:#fff;
+   
+}
+
+.navbar {
+    background: rgba(0,0,0,0.2);
+    padding: 1.5rem 2rem;
+    
+}
+
+.brand_logo {
+    font-size: 0.8rem;
+    color: #fff;
+    display:block;
+    text-align:Left;
+    text-decoration:none;
+    letter-spacing: 1.6px;
+    flex:1;
+}
+
+.brand_logo a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.nav-container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.nav-actions {
+    display:block;
+}
+
+.nav-actions a {
+    font-size: 0.8rem;
+    color: #fff;
+    display:inline;
+    text-align:right;
+    text-transform:capitalize;
+    text-decoration:none;
+    padding:0 0.6rem 0 0;
+    letter-spacing: 1.5px;
+    transition: opacity 0.5s ease;
+    
+}
+
+.nav-actions a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.banner {
+    display: flex;
+    flex:1;
+    align-items:center;
+    justify-content:left;
+    text-align:left;
+    color:#fff;
+    padding: 0rem 2rem;
+    /* overflow:auto; */
+}
+
+/* .banner-container {
+    align-items:flex-start;
+} */
+
+.banner-title {
+    font-size: 2.0rem;
+    font-family: var(--Poppins);
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+
+.banner-content {
+    font-size: 1rem;
+    font-family: var(--Poppins);
+    line-height: 1.3;
+    color:#e8e7e7;
+    /* padding: 2rem; */
+    margin-bottom: 1.8rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    /* font-weight: 400; */
+    /* word-spacing: 0.1rem; */  
+}
+
+.banner form {
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 0.3rem 0.6rem;
+    opacity: 0.3;
+    display:flex;
+    justify-content: space-between;
+    width:11rem;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.041) */
+}
+
+.search-input {
+    outline: 0;
+    font:var(--Poppins);
+    font-size: 0.8rem;
+    width:100%;
+    border:none;
+}
+
+.search-input:hover {
+    color:rgba(47, 48, 49, 0.918);
+    cursor:text;
+}
+
+.search-input::placeholder {
+    color:rgba(112, 114, 116, 0.918);
+    text-transform:capitalize;   
+}
+
+.search-button {
+    border:none;
+    outline: 0;
+    background:#fff;
+    /* opacity:0.3; */
+    font-size: 0.8rem;
+    color:rgba(112, 114, 116, 0.918);
+}
+
+.search-button:hover {
+    color:rgba(47, 48, 49, 0.918);
+    cursor: pointer;
+}
+
+/* <!-- MAIN SECTION: Paintings --> */
+section {
+    /* padding: 2rem; */
+    border: solid #efefef;
+    border-width: 0 12rem 0 12rem;
+    background-color: #efefef;
+}
+
+
+.paintings {
+    padding: 4.5rem 0;
+}
+
+.title {
+    text-align:center;
+    padding: 1rem 0;
+    
+}
+.title h2 {
+    font-family: var(--Poppins);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    padding: 0.6rem 0;
+}
+
+.paintings-content {
+    margin: 2rem 0;
+}
+
+.painting-item {
+    cursor:pointer;
+    margin:1.5rem 0;
+}
+
+.design-image {
+    position:relative;
+    overflow:hidden;
+}
+
+.design-image img {
+    transition: all 0.8s ease;
+}
+
+.design-image::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.design-image:hover img{
+    transform: scale(1.1);
+}
+/* HEART */
+.design-image span:first-of-type {
+    position:absolute;
+    z-index:1;
+    top:10px;
+    left:10px;
+    color:#fff;
+    opacity: 0.8;
+}
+
+.design-image span:first-of-type:hover {
+    color:rgba(255, 0, 0, 0.63);
+    opacity: 1;
+}
+
+/* ARTIST NAME */
+.design-image span:last-of-type {
+    position:absolute;
+    z-index:1;
+    bottom:10px;
+    left:10px;
+    
+    color:#fff;
+}
+
+.painting-title {
+    padding: 10px 0.5rem;
+    font-size:1rem;
+    text-decoration: none;
+    margin: 0 auto;
+    width:100%;
+    text-align:left;
+}
+
+.painting-title a {
+    text-decoration:none;
+    color:var(--dark);
+}
