@@ -184,13 +184,15 @@ header {
 section {
     /* padding: 2rem; */
     border: solid #efefef;
-    border-width: 0 12rem 0 12rem;
+    /* border-width: 0 12rem 0 12rem; */
     background-color: #efefef;
 }
 
 
 .paintings {
     padding: 4.5rem 0;
+    display:flex;
+    flex-direction: column;
 }
 
 .title {
@@ -207,11 +209,20 @@ section {
 
 .paintings-content {
     margin: 2rem 0;
+    /* display:flex; */
+    padding: 2rem;
+}
+
+.paintings-content img {
+    margin: 2rem 0;
+    padding: 2rem;
+    /* display:flex; */
 }
 
 .painting-item {
     cursor:pointer;
     margin:1.5rem 0;
+    /* flex:1; */
 }
 
 .design-image {
@@ -230,7 +241,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
 }
 
 .design-image:hover img{
@@ -257,7 +268,6 @@ section {
     z-index:1;
     bottom:10px;
     left:10px;
-    
     color:#fff;
 }
 
@@ -273,4 +283,136 @@ section {
 .painting-title a {
     text-decoration:none;
     color:var(--dark);
+    font-size: var(--Poppins);
+}
+
+.blog {
+     background:#efefef;
+     padding: 4.5rem 0; 
+}
+
+.blog-content {
+    margin: 2rem 0; 
+}
+
+.blog-img {
+    position:relative;   
+}
+
+.blog-img span {
+    position:absolute;   
+    bottom: 10px;
+    right: 10px;
+    color:white;
+    opacity:0.5;
+    font-size: 1rem;
+}
+
+.blog-text {
+    margin: 1rem 0;
+    padding: 0 0rem;
+} 
+
+.blog-text span{
+    font-weight: 200;
+    display:block;
+    padding-bottom: 0.3rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.blog-text h2{
+    font-family: var(--Poppins);
+    /* padding: 1rem 0; */
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    color:black;
+}
+
+.blog-text p{
+    font-family: var(--Poppins);
+    /* padding: 1rem 0; */
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity:0.7;
+    padding: 0.2rem 0 0.8rem 0;
+    color:black;
+    text-align:justify;
+}
+
+.blog-text a{
+    font-family: var(--Poppins);
+    font-size: 0.6rem;
+    font-weight: 300;
+    opacity:0.5;
+    padding: 0.2rem 0.3rem;
+    text-decoration:none;
+    color:#fff;
+    background-color: rgb(63, 4, 4);
+    opacity:0.65;
+}
+
+.blog-text a:hover{
+    opacity:0.8;
+    box-shadow: rgb(188, 187, 187) 3px 3px;
+    cursor:pointer;
+}
+
+.about {
+    padding:1rem 0;
+}
+
+.about-text p{
+    margin:2rem 0;
+    padding: 0 1em;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    opacity:0.8;
+    letter-spacing: 0.05rem;
+}
+.about-text h2{
+    margin:2rem 0;
+    padding: 0 1em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.footer-section {
+    background-color: black;
+    opacity:0.9;
+    color:#fff;
+    text-align:center;
+    padding: 2rem 0;
+    font-family: var(--Poppins);
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 0.1rem; 
+}
+
+.social-links a {
+    display:block;
+    display:flex;
+    margin-bottom: 1rem;  
+    /* border:solid #5b5959 1px; */
+    border-radius: 11px;
+    color: #fff;
+    width:40px;
+    height:40px;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity:0.9;
+    margin:0.1rem;
 }
